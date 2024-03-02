@@ -18,7 +18,6 @@ function NotFound() {
                         <p className="mt-4 text-gray-500 dark:text-gray-400">Sorry, the page you are looking for doesn't exist</p>
                         <button onClick={handleGoBack} className="mt-4 text-xl text-blue-500 hover:underline cursor-pointer">Home</button>
                     </div>
-
                     <div className="relative w-full mt-12 lg:w-1/2 lg:mt-0">
                         <img className="w-full max-w-lg lg:mx-auto" src="https://merakiui.com/images/components/illustration.svg" alt="" />
                     </div>
