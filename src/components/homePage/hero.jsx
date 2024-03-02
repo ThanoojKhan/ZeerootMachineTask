@@ -27,10 +27,10 @@ function Hero() {
                 <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">This landing page works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
                 <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
                     <div className="flex flex-col sm:flex-row justify-center items-center">
-                        <div data-aos="fade-up" data-aos-delay="400" className="my-2">
+                        <div data-aos="fade-up" data-aos-delay="400" className="m-2">
                             <a className="btn btn-primary min-w-[150px]" href="#0">Start free trial</a>
                         </div>
-                        <div data-aos="fade-up" data-aos-delay="600" className="my-2">
+                        <div data-aos="fade-up" data-aos-delay="600" className="m-2">
                             <a className="btn btn-secondary min-w-[150px]" href="#0">Learn more</a>
                         </div>
                     </div>
