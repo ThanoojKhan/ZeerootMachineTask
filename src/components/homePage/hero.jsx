@@ -22,19 +22,22 @@ function Hero() {
 
     return (
         <div className="mx-auto px-4 sm:px-6 relative bghero-image h-screen" style={{ backgroundImage: `url(${images[currentImageIndex]})` }}>
-            <div className="absolute inset-x-0 bottom-0 px-6 py-16 flex flex-col items-center text-center">
+            <div className="absolute inset-x-0 bottom-0 px-5 sm:py-16 py-8 flex flex-col items-center text-center">
                 <h1 className="text-white mb-4 text-5xl" data-aos="fade-up">Landing page for the task</h1>
                 <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">This landing page works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
                 <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
-                    <div data-aos="fade-up" data-aos-delay="400">
-                        <a className="btn btn-primary" href="#0">Start free trial</a>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="600">
-                        <a className="btn btn-secondary" href="#0">Learn more</a>
+                    <div className="flex flex-col sm:flex-row justify-center items-center">
+                        <div data-aos="fade-up" data-aos-delay="400" className="my-2">
+                            <a className="btn btn-primary min-w-[150px]" href="#0">Start free trial</a>
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay="600" className="my-2">
+                            <a className="btn btn-secondary min-w-[150px]" href="#0">Learn more</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
     );
 }
 
