@@ -120,9 +120,9 @@ ul li {
 
 @media (max-width: 768px) {
     .bghero-image {
-      background-image: url('./assets/images/hero-image-02.jpg');
+        background-image: url('./assets/images/hero-image-02.jpg');
     }
-  }
+}
 
 .btn {
     display: inline-block;
@@ -163,22 +163,21 @@ ul li {
     flex-direction: column;
     align-items: center;
     margin-bottom: 2rem;
-  }
-  
-  .block-card svg {
+}
+
+.block-card svg {
     width: 4rem;
     height: 4rem;
     margin-bottom: 1rem;
-  }
-  
-  .block-card h4 {
+}
+
+.block-card h4 {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
-  }
-  
-  .block-card p {
+}
+
+.block-card p {
     font-size: 1rem;
     color: #000000;
     text-align: center;
-  }
-  
+}

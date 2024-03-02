@@ -2,15 +2,15 @@ import Footer from '../../components/footer'
 import Navbar from '../../components/navbar'
 import UserTable from '../../components/user/userTable'
 
-function Home() {
+function UserData() {
 
   return (
     <div>
       <Navbar />
       <UserTable />
-      <Footer/>
+      <Footer />
     </div>
   )
 }
 
-export default Home
+export default UserData;
