@@ -113,15 +113,8 @@ ul li {
 }
 
 .bghero-image {
-    background-image: url('./assets/images/hero-image-01.jpg');
     background-size: cover;
     background-position: center;
-}
-
-@media (max-width: 768px) {
-    .bghero-image {
-        background-image: url('./assets/images/hero-image-02.jpg');
-    }
 }
 
 .btn {
