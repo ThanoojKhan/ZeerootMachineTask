@@ -21,7 +21,7 @@ function UserTable() {
             }).catch(err => {
                 errorFunction(err);
             });
-        }, 3000);
+        }, 2000);
     }, []);
 
     const paginate = (pageNumber) => {
@@ -47,62 +47,70 @@ function UserTable() {
     const closePopup = () => {
         setSelectedUser(null);
     };
-console.log(search);
+
     return (
         loading ? <Loader /> :
             <div className="flex flex-col justify-between my-5 pb-10">
                 <div className="h-full">
-                    <div className="flex justify-center items-center h-full">
-                        <div className="relative overflow-x-auto shadow-md sm:rounded-lg m-10 w-full bg-gray-500">
-                                    <Search setSearch={setSearch} />
-                            <table className="w-full text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                                <caption className="p-5 text-2xl font-semibold text-left rtl:text-right text-gray-900 dark:text-white ">
-                                    User Data
+                    <div className="flex justify-center items-center">
+                        <div className="relative overflow-x-auto shadow-md sm:rounded-lg m-10 w-full bg-slate-950">
+                            <caption className="p-5 text-2xl font-semibold text-left rtl:text-right text-gray-900 dark:text-white flex flex-col  lg:flex-row lg:items-center relative">
+                                <div className="lg:flex-grow align-middle">
+                                    <p>User Data</p>
                                     <p className="mt-1 text-sm font-normal text-white">Browse a list of user data featuring basic details to help you quickly access information. Click on a User to view more details.</p>
-                                </caption>
-                                <thead className="uppercase bg-gray-50 dark:bg-gray-700 text-white">
-                                    <tr>
-                                        <th scope="col" className="px-6 py-3">
-                                            Name
-                                        </th>
-                                        <th scope="col" className="px-6 py-3">
-                                            Username
-                                        </th>
-                                        <th scope="col" className="px-6 py-3">
-                                            Email
-                                        </th>
-                                        <th scope="col" className="px-6 py-3">
-                                            Phone
-                                        </th>
-                                        <th scope="col" className="px-6 py-3">
-                                            Website
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {currentData.map(user => {
-                                        return (
-                                            <tr key={user.id} onClick={() => handleRowClick(user)} className="bg-white border-b dark:bg-gray-800 cursor-pointer dark:border-gray-700">
-                                                <td className="px-6 py-4">
-                                                    {user.name}
-                                                </td>
-                                                <td className="px-6 py-4">
-                                                    {user.username}
-                                                </td>
-                                                <td className="px-6 py-4">
-                                                    {user.email}
-                                                </td>
-                                                <td className="px-6 py-4">
-                                                    {user.phone}
-                                                </td>
-                                                <td className="px-6 py-4">
-                                                    {user.website}
-                                                </td>
-                                            </tr>
-                                        );
-                                    })}
-                                </tbody>
-                            </table>
+                                </div>
+                                <div className="mt-5">
+                                    <Search setSearch={setSearch} />
+                                </div>
+                            </caption>
+                            {filteredData.length === 0 ? (
+                                <div className="text-center p-4 text-gray-900">No data found</div>
+                            ) : (
+                                <table className="w-full text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                    <thead className="uppercase bg-gray-50 dark:bg-gray-700 text-white">
+                                        <tr>
+                                            <th scope="col" className="px-6 py-3">
+                                                Name
+                                            </th>
+                                            <th scope="col" className="px-6 py-3">
+                                                Username
+                                            </th>
+                                            <th scope="col" className="px-6 py-3">
+                                                Email
+                                            </th>
+                                            <th scope="col" className="px-6 py-3">
+                                                Phone
+                                            </th>
+                                            <th scope="col" className="px-6 py-3">
+                                                Website
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {currentData.map(user => {
+                                            return (
+                                                <tr key={user.id} onClick={() => handleRowClick(user)} className="bg-white border-b dark:bg-gray-800 cursor-pointer dark:border-gray-700">
+                                                    <td className="px-6 py-4">
+                                                        {user.name}
+                                                    </td>
+                                                    <td className="px-6 py-4">
+                                                        {user.username}
+                                                    </td>
+                                                    <td className="px-6 py-4">
+                                                        {user.email}
+                                                    </td>
+                                                    <td className="px-6 py-4">
+                                                        {user.phone}
+                                                    </td>
+                                                    <td className="px-6 py-4">
+                                                        {user.website}
+                                                    </td>
+                                                </tr>
+                                            );
+                                        })}
+                                    </tbody>
+                                </table>
+                            )}
                             <div className="flex justify-center my-4">
                                 {Array.from({ length: Math.ceil(filteredData.length / 5) }, (_, index) => (
                                     <button key={index} className="mx-1 px-3 py-1 bg-gray-200 rounded" onClick={() => paginate(index + 1)}>
