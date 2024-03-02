@@ -47,14 +47,15 @@ function UserTable() {
     const closePopup = () => {
         setSelectedUser(null);
     };
-
+console.log(search);
     return (
         loading ? <Loader /> :
             <div className="flex flex-col justify-between my-5 pb-10">
                 <div className="h-full">
                     <div className="flex justify-center items-center h-full">
                         <div className="relative overflow-x-auto shadow-md sm:rounded-lg m-10 w-full bg-gray-500">
-                            <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                    <Search setSearch={setSearch} />
+                            <table className="w-full text-left rtl:text-right text-gray-500 dark:text-gray-400">
                                 <caption className="p-5 text-2xl font-semibold text-left rtl:text-right text-gray-900 dark:text-white ">
                                     User Data
                                     <p className="mt-1 text-sm font-normal text-white">Browse a list of user data featuring basic details to help you quickly access information. Click on a User to view more details.</p>

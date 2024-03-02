@@ -5,7 +5,7 @@ function Search({setSearch}) {
         <div className="flex mb-3 items-center p-4">
             <label
                 htmlFor="exampleSearch2"
-                className="me-2 text-slate-500"
+                className="me-2 text-white"
             >
                 Search :
             </label>
