@@ -67,9 +67,6 @@ function Navbar() {
             : 'ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 z-50 left-[-100%]'
         }
       >
-        {/* Mobile Logo */}
-        <h1 className='w-full text-3xl font-bold text-[#00df9a] m-4'>ZeeRoot Labs</h1>
-
         {/* Mobile Navigation Items */}
         {navItems.map(item => (
           <li
