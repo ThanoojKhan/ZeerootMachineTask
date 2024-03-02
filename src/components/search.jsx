@@ -12,7 +12,7 @@ function Search({ setSearch }) {
             <input
                 onChange={(e) => setSearch(e.target.value)}
                 type="search"
-                className="peer block min-h-[auto] text-lg rounded border-2 bg-transparent px-3 py-[0.2rem] leading-[1.0]"
+                className="peer block min-h-[auto] text-lg text-white rounded border-2 bg-transparent px-3 py-[0.2rem] leading-[1.0]"
                 id="exampleSearch2"
             />
         </div>

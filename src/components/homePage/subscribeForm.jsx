@@ -26,11 +26,11 @@ function SubscribeForm() {
                         type="email"
                         value={email}
                         onChange={handleInputChange}
-                        className="w-full appearance-none bg-white border focus:border-purple-300 rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-black placeholder-purple-400"
+                        className="w-full appearance-none bg-white border focus:border-white rounded-sm px-4 py-3 mb-2 sm:mb-0 sm:mr-2 text-black placeholder-white"
                         placeholder="Your best email…"
                         aria-label="Your best email…"
                     />
-                    <button type="submit" className="btn text-black bg-purple-100 hover:bg-white shadow">
+                    <button type="submit" className="btn text-black bg-green-600 hover:bg-white shadow">
                         Subscribe
                     </button>
                 </div>
