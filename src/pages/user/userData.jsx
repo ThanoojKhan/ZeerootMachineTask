@@ -1,4 +1,4 @@
-import Footer from '../../components/user/footer'
+import Footer from '../../components/footer'
 import Navbar from '../../components/user/navbar'
 import UserTable from '../../components/user/userTable'
 

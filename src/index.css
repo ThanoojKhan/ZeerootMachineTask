@@ -111,3 +111,47 @@ ul {
 ul li {
     margin-bottom: 5px;
 }
+
+.bghero-image {
+    background-image: url('./assets/images/hero-image-01.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 768px) {
+    .bghero-image {
+      background-image: url('./assets/images/hero-image-02.jpg');
+    }
+  }
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #6C63FF;
+    color: #FFFFFF;
+}
+
+.btn-secondary {
+    background-color: #4B5563;
+    color: #FFFFFF;
+    margin-left: 16px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary:hover {
+    background-color: #5B54FF;
+}
+
+.btn-secondary:hover {
+    background-color: #374151;
+}
