@@ -49,10 +49,10 @@ function UserTable() {
 
     return (
         loading ? <Loader /> :
-            <div className="flex flex-col justify-between my-5  p-10">
+            <div className="flex flex-col justify-between my-5 md:p-10">
                 <div className="h-full mt-5">
                     <div className="flex justify-center items-center">
-                        <div className="relative overflow-x-auto shadow-md sm:rounded-lg m-10 w-full bg-slate-950">
+                        <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-10 mb-16 md:m-10 w-full bg-slate-950">
                             <div className="p-5 text-2xl font-semibold text-left rtl:text-right text-gray-900 dark:text-white flex flex-col  lg:flex-row lg:items-center relative">
                                 <div className="lg:flex-grow align-middle">
                                     <p>User Data</p>
