@@ -11,8 +11,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-          <Toaster toastOptions={{duration:4000}}/>
-          <App />
+        <Toaster toastOptions={{ duration: 4000 }} />
+        <App />
       </PersistGate>
     </Provider>
   </React.StrictMode>,

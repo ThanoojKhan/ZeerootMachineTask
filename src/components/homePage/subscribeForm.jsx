@@ -53,7 +53,6 @@ function SubscribeForm() {
                         </button>
                     </div>
                 </div>
-
             )}
         </>
     );

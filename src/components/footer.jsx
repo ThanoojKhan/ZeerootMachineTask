@@ -9,7 +9,6 @@ function Footer() {
                     <p className="text-sm">All rights reserved</p>
                     <p className="text-sm">&copy; 2024 Thanooj Khan</p>
                 </div>
-
                 <div className="ml-6 flex space-x-4">
                     <a href="https://github.com/ThanoojKhan" className="text-gray-400 hover:text-gray-200" target="_blank" rel="noopener noreferrer">
                         <FaGithub size={24} />

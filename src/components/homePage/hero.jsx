@@ -4,38 +4,38 @@ import image2 from '../../assets/images/hero-image-02.jpg';
 import image3 from '../../assets/images/hero-image-03.jpg';
 
 const images = [
-  image1,
-  image2,
-  image3
+    image1,
+    image2,
+    image3
 ];
 
 function Hero() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 3000);
 
-    return () => clearInterval(interval);
-  }, []);
+        return () => clearInterval(interval);
+    }, []);
 
-  return (
-    <div className="mx-auto px-4 sm:px-6 relative bghero-image h-screen" style={{ backgroundImage: `url(${images[currentImageIndex]})` }}>
-      <div className="absolute inset-x-0 bottom-0 px-6 py-16 flex flex-col items-center text-center">
-        <h1 className="text-white mb-4 text-5xl" data-aos="fade-up">Landing page for the task</h1>
-        <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">This landing page works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
-        <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
-          <div data-aos="fade-up" data-aos-delay="400">
-            <a className="btn btn-primary" href="#0">Start free trial</a>
-          </div>
-          <div data-aos="fade-up" data-aos-delay="600">
-            <a className="btn btn-secondary" href="#0">Learn more</a>
-          </div>
+    return (
+        <div className="mx-auto px-4 sm:px-6 relative bghero-image h-screen" style={{ backgroundImage: `url(${images[currentImageIndex]})` }}>
+            <div className="absolute inset-x-0 bottom-0 px-6 py-16 flex flex-col items-center text-center">
+                <h1 className="text-white mb-4 text-5xl" data-aos="fade-up">Landing page for the task</h1>
+                <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">This landing page works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
+                <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
+                    <div data-aos="fade-up" data-aos-delay="400">
+                        <a className="btn btn-primary" href="#0">Start free trial</a>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="600">
+                        <a className="btn btn-secondary" href="#0">Learn more</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 }
 
 export default Hero;
