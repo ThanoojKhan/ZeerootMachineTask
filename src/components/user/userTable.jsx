@@ -54,9 +54,9 @@ function UserTable() {
                     <div className="flex justify-center items-center">
                         <div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-10 mb-16 md:m-10 w-full bg-slate-950">
                             <div className="p-5 text-2xl font-semibold text-left rtl:text-right text-gray-900 dark:text-white flex flex-col  lg:flex-row lg:items-center relative">
-                                <div className="lg:flex-grow align-middle">
+                                <div className="lg:flex-grow align-middle text-white">
                                     <p>User Data</p>
-                                    <p className="mt-1 text-sm font-normal text-white">Browse a list of user data featuring basic details to help you quickly access information. Click on a User to view more details.</p>
+                                    <p className="mt-1 text-sm font-normal">Browse a list of user data featuring basic details to help you quickly access information. Click on a User to view more details.</p>
                                 </div>
                                 <div className="mt-5">
                                     <Search setSearch={setSearch} />
