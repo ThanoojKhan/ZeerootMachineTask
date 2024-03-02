@@ -40,28 +40,26 @@ function UserTable() {
     const indexOfFirstData = indexOfLastData - 5;
     const currentData = filteredData.slice(indexOfFirstData, indexOfLastData);
 
-    // Function to handle click on a row
     const handleRowClick = (user) => {
         setSelectedUser(user);
     };
 
-    // Function to close the popup
     const closePopup = () => {
         setSelectedUser(null);
     };
 
     return (
         loading ? <Loader /> :
-            <div className="flex flex-col justify-between my-5">
+            <div className="flex flex-col justify-between my-5 pb-10">
                 <div className="h-full">
                     <div className="flex justify-center items-center h-full">
-                        <div className="relative overflow-x-auto shadow-md sm:rounded-lg m-10 w-full">
+                        <div className="relative overflow-x-auto shadow-md sm:rounded-lg m-10 w-full bg-gray-500">
                             <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                                <caption className="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800">
+                                <caption className="p-5 text-2xl font-semibold text-left rtl:text-right text-gray-900 dark:text-white ">
                                     User Data
-                                    <p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">Browse a list of user data featuring basic details to help you quickly access information. Click on a User to view more details.</p>
+                                    <p className="mt-1 text-sm font-normal text-white">Browse a list of user data featuring basic details to help you quickly access information. Click on a User to view more details.</p>
                                 </caption>
-                                <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                <thead className="uppercase bg-gray-50 dark:bg-gray-700 text-white">
                                     <tr>
                                         <th scope="col" className="px-6 py-3">
                                             Name
