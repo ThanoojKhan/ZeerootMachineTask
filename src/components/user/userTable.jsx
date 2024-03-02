@@ -52,67 +52,71 @@ function UserTable() {
 
     return (
         loading ? <Loader /> :
-            <div className="flex justify-center items-center">
-                <div className="relative overflow-x-auto shadow-md sm:rounded-lg m-10 w-full">
-                    <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                        <caption className="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800">
-                            User Data
-                            <p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">Browse a list of user data featuring basic details to help you quickly access information. Click on a User to view more details.</p>
-                        </caption>
-                        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                            <tr>
-                                <th scope="col" className="px-6 py-3">
-                                    Name
-                                </th>
-                                <th scope="col" className="px-6 py-3">
-                                    Username
-                                </th>
-                                <th scope="col" className="px-6 py-3">
-                                    Email
-                                </th>
-                                <th scope="col" className="px-6 py-3">
-                                    Phone
-                                </th>
-                                <th scope="col" className="px-6 py-3">
-                                    Website
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {currentData.map(user => {
-                                return (
-                                    <tr key={user.id} onClick={() => handleRowClick(user)} className="bg-white border-b dark:bg-gray-800 cursor-pointer dark:border-gray-700">
-                                        <td className="px-6 py-4">
-                                            {user.name}
-                                        </td>
-                                        <td className="px-6 py-4">
-                                            {user.username}
-                                        </td>
-                                        <td className="px-6 py-4">
-                                            {user.email}
-                                        </td>
-                                        <td className="px-6 py-4">
-                                            {user.phone}
-                                        </td>
-                                        <td className="px-6 py-4">
-                                            {user.website}
-                                        </td>
+            <div className="flex flex-col justify-between my-5">
+                <div className="h-full">
+                    <div className="flex justify-center items-center h-full">
+                        <div className="relative overflow-x-auto shadow-md sm:rounded-lg m-10 w-full">
+                            <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                                <caption className="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800">
+                                    User Data
+                                    <p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">Browse a list of user data featuring basic details to help you quickly access information. Click on a User to view more details.</p>
+                                </caption>
+                                <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                                    <tr>
+                                        <th scope="col" className="px-6 py-3">
+                                            Name
+                                        </th>
+                                        <th scope="col" className="px-6 py-3">
+                                            Username
+                                        </th>
+                                        <th scope="col" className="px-6 py-3">
+                                            Email
+                                        </th>
+                                        <th scope="col" className="px-6 py-3">
+                                            Phone
+                                        </th>
+                                        <th scope="col" className="px-6 py-3">
+                                            Website
+                                        </th>
                                     </tr>
-                                );
-                            })}
-                        </tbody>
-                    </table>
-                    <div className="flex justify-center my-4">
-                        {Array.from({ length: Math.ceil(filteredData.length / 5) }, (_, index) => (
-                            <button key={index} className="mx-1 px-3 py-1 bg-gray-200 rounded" onClick={() => paginate(index + 1)}>
-                                {index + 1}
-                            </button>
-                        ))}
+                                </thead>
+                                <tbody>
+                                    {currentData.map(user => {
+                                        return (
+                                            <tr key={user.id} onClick={() => handleRowClick(user)} className="bg-white border-b dark:bg-gray-800 cursor-pointer dark:border-gray-700">
+                                                <td className="px-6 py-4">
+                                                    {user.name}
+                                                </td>
+                                                <td className="px-6 py-4">
+                                                    {user.username}
+                                                </td>
+                                                <td className="px-6 py-4">
+                                                    {user.email}
+                                                </td>
+                                                <td className="px-6 py-4">
+                                                    {user.phone}
+                                                </td>
+                                                <td className="px-6 py-4">
+                                                    {user.website}
+                                                </td>
+                                            </tr>
+                                        );
+                                    })}
+                                </tbody>
+                            </table>
+                            <div className="flex justify-center my-4">
+                                {Array.from({ length: Math.ceil(filteredData.length / 5) }, (_, index) => (
+                                    <button key={index} className="mx-1 px-3 py-1 bg-gray-200 rounded" onClick={() => paginate(index + 1)}>
+                                        {index + 1}
+                                    </button>
+                                ))}
+                            </div>
+                            {/* Popup */}
+                            {selectedUser && (
+                                <Popup selectedUser={selectedUser} closePopup={closePopup} />
+                            )}
+                        </div>
                     </div>
-                    {/* Popup */}
-                    {selectedUser && (
-                        <Popup selectedUser={selectedUser} closePopup={closePopup} />
-                    )}
                 </div>
             </div>
     );

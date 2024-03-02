@@ -2,7 +2,7 @@ import React from 'react';
 
 function Popup({ selectedUser, closePopup }) {
     return (
-        <div className="popup-container">
+        <div className="popup-container z-50">
             <div className="popup">
                 <div className="popup-content">
                     <div className="popup-header">
